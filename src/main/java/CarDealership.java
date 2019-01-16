@@ -67,9 +67,10 @@ public class CarDealership {
         return price;
     }
 
-    public void repairCar(Car pcar){
-        double repairCost = pcar.getDamage();
+    public void repairCar(Car car){
+        double repairCost = car.getDamage();
         till -= repairCost;
-        pcar.repair(repairCost);
+        //pcar.repair(repairCost);
+        car.repair();
     }
 }

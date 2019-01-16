@@ -81,7 +81,17 @@ public class CarDealershipTest {
         assertEquals(99980, ccc.getTill(), 0.001);
         assertEquals(250, pcar.getRentPrice(), 0.001);
         assertEquals(0, pcar.getDamage(), 0.001);
+    }
 
-
+    @Test
+    public void canRepairECar(){
+        ccc.addCar(ecar);
+        assertEquals(1, ccc.getCarCount());
+        ecar.setDamage(200);
+        assertEquals(54800, ecar.getBuyPrice(), 0.001);
+        ccc.repairCar(ecar);
+        assertEquals(99800, ccc.getTill(), 0.001);
+        assertEquals(55000, ecar.getBuyPrice(), 0.001);
+        assertEquals(0, ecar.getDamage(), 0.001);
     }
 }

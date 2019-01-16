@@ -11,12 +11,17 @@ public class HybridCar extends Car {
 
 
     public double getRentPrice() {
-        return rentPrice;
+
+        return rentPrice - getDamage();
+    }
+
+    public void setRentPrice(Double newPrice){
+        this.rentPrice = newPrice;
     }
 
     public double getBuyPrice() {
 //        TODO: if rent cant buy vice verus
-        return buyPrice;
+        return buyPrice - getDamage();
     }
 
 

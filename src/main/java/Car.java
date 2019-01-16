@@ -51,22 +51,22 @@ public abstract class Car {
     }
 
     public double getRentPrice() {
-        return rentPrice;
+        return rentPrice - damage;
     }
 
     public double getBuyPrice() {
-        return buyPrice;
+        return buyPrice - damage;
     }
 
     public double getCost() {
         return cost;
     }
 
-    public void repair(double cost){
-        double oldPrice = getRentPrice();
-        rentPrice =  oldPrice += cost;
-        buyPrice += cost;
-        damage = 0;
+    public void repair(){
+        //ouble oldPrice = getRentPrice();
+        //rentPrice =  oldPrice + cost;
+       // buyPrice =  oldPrice + cost;
+        setDamage(0);
     }
 
     //this is adding it to abs car rent price which is 0

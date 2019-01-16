@@ -16,24 +16,24 @@ public class PetrolCar extends Car {
 //
     public double getRentPrice() {
 
-        return rentPrice -= getDamage();
+        return rentPrice - getDamage();
     }
 
-    public void setRentPrice(Double damage){
-        rentPrice += damage;
+    public void setRentPrice(Double newPrice){
+        this.rentPrice = newPrice;
     }
 
     public double getBuyPrice() {
 //        TODO: if rent cant buy vice verus
-        return buyPrice -= getDamage();
+        return buyPrice - getDamage();
     }
 
 
 
-    public void repair(double cost){
-        rentPrice += cost;
-        buyPrice += cost;
-        setDamage(0);
-    }
+//    public void repair(double cost){
+//        rentPrice += cost;
+//        buyPrice += cost;
+//        setDamage(0);
+//    }
 
 }
